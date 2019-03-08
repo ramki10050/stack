@@ -2,7 +2,7 @@
 	"AWSTemplateFormatVersion": "2010-09-09",
     "Description": "Test Initial Stack",
 	"Resources": {
-			"public-instance": {
+			"publicinstance": {
 				"Type": "AWS::EC2::Instance",
 				"Properties": {
 				"ImageId" : "ami-0080e4c5bc078760e",
@@ -17,7 +17,7 @@
                 "KeyName": "mykey1"
 				}
     }, 
-			"private-instance": {
+			"privateinstance": {
 			"Type": "AWS::EC2::Instance",
             "Properties": {
 				"ImageId" : "ami-0080e4c5bc078760e",
