@@ -1,0 +1,36 @@
+{
+	"AWSTemplateFormatVersion": "2010-09-09",
+    "Description": "Test Initial Stack",
+	"Resources": {
+			"public-instance": {
+				"Type": "AWS::EC2::Instance",
+				"Properties": {
+				"ImageId" : "ami-0080e4c5bc078760e",
+                "InstanceType" : "t2.micro",
+				"SecurityGroupIds" : [ "sg-010ba6ff245b06868" ],
+				"AvailabilityZone" : "us-east-1a",
+				"SubnetId" : "subnet-08ec8ca27060fe81d",
+				"IamInstanceProfile" : "Admin",
+				"Tags": [                                                            
+					{"Key" : "Name", "Value" : "puppet_Stack"},
+                    {"Key" : "Role", "Value" : "Admin"}],
+                "KeyName": "mykey1"
+				}
+    }, 
+			"private-instance": {
+			"Type": "AWS::EC2::Instance",
+            "Properties": {
+				"ImageId" : "ami-0080e4c5bc078760e",
+                "InstanceType" : "t2.micro",
+				"SecurityGroupIds" : [ "sg-010ba6ff245b06868" ],
+				"AvailabilityZone" : "us-east-1a",
+				"SubnetId" : "subnet-0ac74a7fc04d570a3",
+				"IamInstanceProfile" : "Admin",
+				"Tags": [                                                            
+					{"Key" : "Name", "Value" : "puppetagent_Stack"},
+                    {"Key" : "Role", "Value" : "Admin"}],
+                "KeyName": "mykey1"
+				}
+    }
+}
+}
