@@ -14,7 +14,7 @@
 				"Tags": [                                                            
 					{"Key" : "Name", "Value" : "puppet_Stack"},
                     {"Key" : "Role", "Value" : "Admin"}],
-                "KeyName": "mykey1"
+                "KeyName": "testkeypair"
 				}
     }, 
 			"privateinstance": {
@@ -29,7 +29,7 @@
 				"Tags": [                                                            
 					{"Key" : "Name", "Value" : "puppetagent_Stack"},
                     {"Key" : "Role", "Value" : "Admin"}],
-                "KeyName": "mykey1"
+                "KeyName": "testkeypair"
 				}
     }
 }
