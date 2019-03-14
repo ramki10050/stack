@@ -1,0 +1,37 @@
+{
+	"AWSTemplateFormatVersion": "2010-09-09",
+    "Description": "Test Initial Stack",
+	
+	    "Resources": {
+		"EC2Instance": {
+			"Type": "AWS::EC2::Instance",
+            "Properties": {
+                              
+				"ImageId": "ami-04681a1dbd79675a5",
+                "InstanceType": "t2.micro",
+				"SecurityGroupIds" : [ "sg-324f127e"],
+				"AvailabilityZone": "us-east-1b",
+				"SubnetId" : "	subnet-ebc84e8c",
+				"IamInstanceProfile" : "Admin", 
+				"Tags": [                                                            
+					{"Key" : "AGS", "Value" : "Admin"},
+                    {"Key" : "Name", "Value" : "AWSLX-SM88"},
+                    {"Key" : "SDLC", "Value" : "DEV"},
+                    {"Key" : "Cost Center", "Value" : "IME"},
+                    {"Key" : "Owner", "Value" : "BOND"},
+                    {"Key" : "Role", "Value" : "Test Initial Stack"}],
+                "KeyName": "mykey",
+				"UserData" : {
+                    "Fn::Base64" : {
+                        "Fn::Join" : ["",
+                            [
+                            ]
+                        ]
+                    }
+                }				
+				
+			}
+    } 
+	}
+            
+}
